@@ -1,0 +1,12 @@
+import ToDoItem from "./ToDoItem";
+
+export default function ToDoList({ tasks, toggleTask, deleteTask, editTask }) {
+  return (
+    <ul className="todo-list">
+      {tasks.map(task => (
+        <ToDoItem key={task.id} task={task} toggleTask={toggleTask} deleteTask={deleteTask} editTask={editTask} />
+      ))}
+    </ul>
+  );
+}
+
